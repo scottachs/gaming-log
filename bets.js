@@ -1,5 +1,5 @@
 window.PAPER_PICKS = {
- "updated": "Nov 10, 2026, 9:26 PM ET",
+ "updated": "Nov 10, 2026, 9:38 PM ET",
  "bets": [
   {
    "id": null,
@@ -26,7 +26,7 @@ window.PAPER_PICKS = {
    "fair": -102,
    "edge": -1.5,
    "zone": "yellow",
-   "result": "open",
+   "result": "won",
    "created": 1794348500004
   },
   {
