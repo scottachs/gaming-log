@@ -1,6 +1,48 @@
 window.PAPER_PICKS = {
- "updated": "Nov 11, 2026, 5:16 PM ET",
+ "updated": "Nov 11, 2026, 6:03 PM ET",
  "bets": [
+  {
+   "id": "p-20261111-trail-blazers-ml-fd",
+   "date": "2026-11-11",
+   "sport": "NBA",
+   "game": "Thunder @ Trail Blazers",
+   "desc": "Trail Blazers ML",
+   "book": "FanDuel",
+   "odds": -136,
+   "fair": -132,
+   "edge": -1.4,
+   "result": "open",
+   "zone": "yellow",
+   "created": 1794438100000
+  },
+  {
+   "id": "p-20261111-rockets-ml-fd",
+   "date": "2026-11-11",
+   "sport": "NBA",
+   "game": "Warriors @ Rockets",
+   "desc": "Rockets ML",
+   "book": "FanDuel",
+   "odds": -250,
+   "fair": -237,
+   "edge": -1.6,
+   "result": "open",
+   "zone": "yellow",
+   "created": 1794438100000
+  },
+  {
+   "id": "p-20261111-ducks-ml-fd",
+   "date": "2026-11-11",
+   "sport": "NHL",
+   "game": "Predators @ Ducks",
+   "desc": "Ducks ML",
+   "book": "FanDuel",
+   "odds": -134,
+   "fair": -130,
+   "edge": -1.4,
+   "result": "open",
+   "zone": "yellow",
+   "created": 1794435960000
+  },
   {
    "id": "p-20261111-old-dominion-ml-fd",
    "date": "2026-11-11",
