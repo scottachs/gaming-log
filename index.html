@@ -71,11 +71,13 @@ th.n, td.n { text-align: right; }
 .chip.top { background: var(--top-soft); color: var(--top); }
 .chip.green { background: var(--win-soft); color: var(--win); }
 .chip.yellow { background: var(--yellow-soft); color: var(--yellow); }
+.chip.won { background: var(--win-soft); color: var(--win); }
+.chip.lost { background: var(--yellow-soft); color: var(--yellow); }
 .chip.none { background: var(--bg); color: var(--muted); }
 @media (min-width: 721px) {
   table { table-layout: fixed; }
-  th:nth-child(1) { width: 40%; } th:nth-child(2) { width: 16%; } th:nth-child(3) { width: 13%; }
-  th:nth-child(4) { width: 13%; } th:nth-child(5) { width: 18%; }
+  th:nth-child(1) { width: 33%; } th:nth-child(2) { width: 13%; } th:nth-child(3) { width: 11%; }
+  th:nth-child(4) { width: 11%; } th:nth-child(5) { width: 17%; } th:nth-child(6) { width: 15%; }
 }
 @media (max-width: 720px) {
   thead { display: none; }
@@ -181,7 +183,7 @@ footer { color: var(--muted); font-size: 13px; }
 
   function table(rows) {
     var box = node("div", "box"), tb = node("table"), head = node("thead"), hr = node("tr");
-    [["Pick", ""], ["Book", ""], ["Price", "n"], ["Fair price", "n"], ["Edge", ""]].forEach(function (h) { hr.appendChild(node("th", h[1], h[0])); });
+    [["Pick", ""], ["Book", ""], ["Price", "n"], ["Fair price", "n"], ["Edge", ""], ["Result", ""]].forEach(function (h) { hr.appendChild(node("th", h[1], h[0])); });
     head.appendChild(hr); tb.appendChild(head);
     var body = node("tbody");
     rows.forEach(function (b) {
@@ -193,6 +195,11 @@ footer { color: var(--muted); font-size: 13px; }
       var e = node("td", "c-edge");
       if (b.edge != null) e.appendChild(node("span", "chip num " + (ZONE[b.zone] ? b.zone : "none"), (ZONE[b.zone] ? ZONE[b.zone] + " " : "") + signed(b.edge)));
       tr.appendChild(e);
+      var rs = node("td", "c-res"); rs.setAttribute("data-k", "Result");
+      var R = { won: "Won", lost: "Lost", push: "Push", open: "Pending" };
+      var rk = R[b.result] ? b.result : "open";
+      rs.appendChild(node("span", "chip " + (rk === "won" || rk === "lost" ? rk : "none"), R[rk]));
+      tr.appendChild(rs);
       body.appendChild(tr);
     });
     tb.appendChild(body); box.appendChild(tb);
