@@ -1,8 +1,8 @@
 window.PAPER_PICKS = {
- "updated": "Nov 10, 2026, 9:38 PM ET",
+ "updated": "Nov 11, 2026, 5:15 AM ET",
  "bets": [
   {
-   "id": null,
+   "id": "p-20261110-suns-ml-fd",
    "date": "2026-11-10",
    "sport": "NBA",
    "game": "Clippers @ Suns",
@@ -11,12 +11,12 @@ window.PAPER_PICKS = {
    "odds": -164,
    "fair": -158,
    "edge": -1.3,
+   "result": "won",
    "zone": "yellow",
-   "result": "open",
    "created": 1794352500000
   },
   {
-   "id": null,
+   "id": "p-20261110-under-157-5-wake-forest-fd",
    "date": "2026-11-10",
    "sport": "NCAAB",
    "game": "Charleston So @ Wake Forest",
@@ -25,12 +25,12 @@ window.PAPER_PICKS = {
    "odds": -105,
    "fair": -102,
    "edge": -1.5,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794348500004
   },
   {
-   "id": null,
+   "id": "p-20261110-under-160-5-tcu-fd",
    "date": "2026-11-10",
    "sport": "NCAAB",
    "game": "UL Monroe @ Texas Christian",
@@ -39,12 +39,12 @@ window.PAPER_PICKS = {
    "odds": -105,
    "fair": -102,
    "edge": -1.2,
+   "result": "lost",
    "zone": "yellow",
-   "result": "open",
    "created": 1794348500003
   },
   {
-   "id": null,
+   "id": "p-20261110-iowa-state-m35-5-dk",
    "date": "2026-11-10",
    "sport": "NCAAB",
    "game": "Southern @ Iowa State",
@@ -53,12 +53,12 @@ window.PAPER_PICKS = {
    "odds": -105,
    "fair": -103,
    "edge": -1.1,
+   "result": "won",
    "zone": "yellow",
-   "result": "open",
    "created": 1794348500002
   },
   {
-   "id": null,
+   "id": "p-20261110-over-150-5-colorado-fd",
    "date": "2026-11-10",
    "sport": "NCAAB",
    "game": "San Diego @ Colorado",
@@ -67,12 +67,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -108,
    "edge": -1,
+   "result": "won",
    "zone": "yellow",
-   "result": "open",
    "created": 1794348500001
   },
   {
-   "id": null,
+   "id": "p-20261110-under-155-5-utah-fd",
    "date": "2026-11-10",
    "sport": "NCAAB",
    "game": "Weber St. @ Utah",
@@ -81,12 +81,12 @@ window.PAPER_PICKS = {
    "odds": -105,
    "fair": -106,
    "edge": 0.4,
+   "result": "won",
    "zone": "green",
-   "result": "open",
    "created": 1794348500000
   },
   {
-   "id": null,
+   "id": "p-20261110-red-wings-p1-5-dk",
    "date": "2026-11-10",
    "sport": "NHL",
    "game": "Red Wings @ Blues",
@@ -95,12 +95,12 @@ window.PAPER_PICKS = {
    "odds": -192,
    "fair": -191,
    "edge": -0.2,
+   "result": "won",
    "zone": "yellow",
-   "result": "open",
    "created": 1794341340000
   },
   {
-   "id": null,
+   "id": "p-20261109-under-228-5-fd",
    "date": "2026-11-09",
    "sport": "NBA",
    "game": "Spurs @ Suns",
@@ -109,12 +109,12 @@ window.PAPER_PICKS = {
    "odds": -115,
    "fair": -110,
    "edge": -1.9,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794263281006
   },
   {
-   "id": null,
+   "id": "p-20261109-raptors-ml-fd",
    "date": "2026-11-09",
    "sport": "NBA",
    "game": "Grizzlies @ Raptors",
@@ -123,12 +123,12 @@ window.PAPER_PICKS = {
    "odds": -146,
    "fair": -140,
    "edge": -1.7,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794263281005
   },
   {
-   "id": null,
+   "id": "p-20261109-mavericks-ml-fd",
    "date": "2026-11-09",
    "sport": "NBA",
    "game": "Pacers @ Mavericks",
@@ -137,12 +137,12 @@ window.PAPER_PICKS = {
    "odds": -148,
    "fair": -143,
    "edge": -1.4,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794263281004
   },
   {
-   "id": null,
+   "id": "p-20261109-hawks-ml-dk",
    "date": "2026-11-09",
    "sport": "NBA",
    "game": "Lakers @ Hawks",
@@ -151,12 +151,12 @@ window.PAPER_PICKS = {
    "odds": -125,
    "fair": -122,
    "edge": -1,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794263281003
   },
   {
-   "id": null,
+   "id": "p-20261108-over-219-5-dk",
    "date": "2026-11-08",
    "sport": "NBA",
    "game": "Celtics @ Bucks",
@@ -165,12 +165,12 @@ window.PAPER_PICKS = {
    "odds": -113,
    "fair": -109,
    "edge": -1.8,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794174417489
   },
   {
-   "id": null,
+   "id": "p-20261108-lions-ml-dk",
    "date": "2026-11-08",
    "sport": "NFL",
    "game": "Lions @ Dolphins",
@@ -179,12 +179,12 @@ window.PAPER_PICKS = {
    "odds": -305,
    "fair": -282,
    "edge": -2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794157418209
   },
   {
-   "id": null,
+   "id": "p-20261108-texans-ml-dk",
    "date": "2026-11-08",
    "sport": "NFL",
    "game": "Texans @ Chargers",
@@ -193,12 +193,12 @@ window.PAPER_PICKS = {
    "odds": -230,
    "fair": -218,
    "edge": -1.6,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794157418208
   },
   {
-   "id": null,
+   "id": "p-20261108-over-51-5-dk",
    "date": "2026-11-08",
    "sport": "NFL",
    "game": "Cowboys @ Colts",
@@ -207,12 +207,12 @@ window.PAPER_PICKS = {
    "odds": 100,
    "fair": 103,
    "edge": -1.5,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794157418207
   },
   {
-   "id": null,
+   "id": "p-20261108-broncos-ml-dk",
    "date": "2026-11-08",
    "sport": "NFL",
    "game": "Broncos @ Panthers",
@@ -221,12 +221,12 @@ window.PAPER_PICKS = {
    "odds": -148,
    "fair": -143,
    "edge": -1.4,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794157418206
   },
   {
-   "id": null,
+   "id": "p-20261107-hawks-ml-fd",
    "date": "2026-11-07",
    "sport": "NBA",
    "game": "Nets @ Hawks",
@@ -235,12 +235,12 @@ window.PAPER_PICKS = {
    "odds": -260,
    "fair": -245,
    "edge": -1.7,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794091980001
   },
   {
-   "id": null,
+   "id": "p-20261107-under-224-5-dk",
    "date": "2026-11-07",
    "sport": "NBA",
    "game": "Knicks @ Cavaliers",
@@ -249,12 +249,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -108,
    "edge": -0.9,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794091980000
   },
   {
-   "id": null,
+   "id": "p-20261107-under-6-5-fd",
    "date": "2026-11-07",
    "sport": "NHL",
    "game": "Penguins @ Kings",
@@ -263,12 +263,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -106,
    "edge": -1.5,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794080349595
   },
   {
-   "id": null,
+   "id": "p-20261107-berkly-catton-over-0-5-points-fd",
    "date": "2026-11-07",
    "sport": "NHL",
    "game": "Rangers @ Kraken",
@@ -277,12 +277,12 @@ window.PAPER_PICKS = {
    "odds": 144,
    "fair": 147,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794080349594
   },
   {
-   "id": null,
+   "id": "p-20261107-oilers-ml-fd",
    "date": "2026-11-07",
    "sport": "NHL",
    "game": "Canucks @ Oilers",
@@ -291,12 +291,12 @@ window.PAPER_PICKS = {
    "odds": -310,
    "fair": -299,
    "edge": -0.9,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794080349593
   },
   {
-   "id": null,
+   "id": "p-20261107-dougie-hamilton-over-0-5-points-dk",
    "date": "2026-11-07",
    "sport": "NHL",
    "game": "Devils @ Islanders",
@@ -305,12 +305,12 @@ window.PAPER_PICKS = {
    "odds": 170,
    "fair": 164,
    "edge": 2.1,
-   "zone": "top",
    "result": "won",
+   "zone": "top",
    "created": 1794080349592
   },
   {
-   "id": null,
+   "id": "p-20261107-esa-lindell-over-0-5-points-dk",
    "date": "2026-11-07",
    "sport": "NHL",
    "game": "Sharks @ Stars",
@@ -319,12 +319,12 @@ window.PAPER_PICKS = {
    "odds": 175,
    "fair": 167,
    "edge": 2.9,
-   "zone": "top",
    "result": "lost",
+   "zone": "top",
    "created": 1794080349591
   },
   {
-   "id": null,
+   "id": "p-20261107-purdue-ml-fd",
    "date": "2026-11-07",
    "sport": "NCAAF",
    "game": "Maryland @ Purdue",
@@ -333,12 +333,12 @@ window.PAPER_PICKS = {
    "odds": -188,
    "fair": -182,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794066180774
   },
   {
-   "id": null,
+   "id": "p-20261107-j-coleman-over-39-5-rush-yds-dk",
    "date": "2026-11-07",
    "sport": "NCAAF",
    "game": "Texas A&M @ South Carolina",
@@ -347,12 +347,12 @@ window.PAPER_PICKS = {
    "odds": -109,
    "fair": -106,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794066180773
   },
   {
-   "id": null,
+   "id": "p-20261107-ohio-state-ml-fd",
    "date": "2026-11-07",
    "sport": "NCAAF",
    "game": "Oregon @ Ohio State",
@@ -361,12 +361,12 @@ window.PAPER_PICKS = {
    "odds": -285,
    "fair": -273,
    "edge": -1.1,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794066180772
   },
   {
-   "id": null,
+   "id": "p-20261107-oregon-state-ml-fd",
    "date": "2026-11-07",
    "sport": "NCAAF",
    "game": "Texas State @ Oregon State",
@@ -375,12 +375,12 @@ window.PAPER_PICKS = {
    "odds": -200,
    "fair": -194,
    "edge": -0.9,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1794066180771
   },
   {
-   "id": null,
+   "id": "p-20261107-tennessee-ml-dk",
    "date": "2026-11-07",
    "sport": "NCAAF",
    "game": "Kentucky @ Tennessee",
@@ -389,12 +389,12 @@ window.PAPER_PICKS = {
    "odds": -205,
    "fair": -199,
    "edge": -0.9,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794066180770
   },
   {
-   "id": null,
+   "id": "p-20261106-darius-acuff-jr-under-23-5-pts-dk",
    "date": "2026-11-06",
    "sport": "NBA",
    "game": "Spurs @ Kings",
@@ -403,12 +403,12 @@ window.PAPER_PICKS = {
    "odds": -105,
    "fair": -105,
    "edge": -0.2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1794015480000
   },
   {
-   "id": null,
+   "id": "p-20261105-incarnate-word-ml-dk",
    "date": "2026-11-05",
    "sport": "NCAAB",
    "game": "Chicago St. @ Incarnate Word",
@@ -417,12 +417,12 @@ window.PAPER_PICKS = {
    "odds": -345,
    "fair": -320,
    "edge": -1.7,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793921123876
   },
   {
-   "id": null,
+   "id": "p-20261105-virginia-tech-m19-5-fd",
    "date": "2026-11-05",
    "sport": "NCAAB",
    "game": "Mercer @ Virginia Tech",
@@ -431,12 +431,12 @@ window.PAPER_PICKS = {
    "odds": -120,
    "fair": -116,
    "edge": -1.7,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793921123875
   },
   {
-   "id": null,
+   "id": "p-20261105-marist-ml-fd",
    "date": "2026-11-05",
    "sport": "NCAAB",
    "game": "UMBC @ Marist",
@@ -445,12 +445,12 @@ window.PAPER_PICKS = {
    "odds": -188,
    "fair": -180,
    "edge": -1.6,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793921123874
   },
   {
-   "id": null,
+   "id": "p-20261105-sacred-heart-ml-fd",
    "date": "2026-11-05",
    "sport": "NCAAB",
    "game": "Maine @ Sacred Heart",
@@ -459,12 +459,12 @@ window.PAPER_PICKS = {
    "odds": -255,
    "fair": -241,
    "edge": -1.6,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793921123873
   },
   {
-   "id": null,
+   "id": "p-20261105-navy-ml-dk",
    "date": "2026-11-05",
    "sport": "NCAAB",
    "game": "Delaware St. @ Navy",
@@ -473,12 +473,12 @@ window.PAPER_PICKS = {
    "odds": -395,
    "fair": -373,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793921123872
   },
   {
-   "id": null,
+   "id": "p-20261105-suns-ml-fd",
    "date": "2026-11-05",
    "sport": "NBA",
    "game": "Magic @ Suns",
@@ -487,12 +487,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -106,
    "edge": -1.6,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793921123871
   },
   {
-   "id": null,
+   "id": "p-20261105-alex-killorn-over-0-5-points-dk",
    "date": "2026-11-05",
    "sport": "NHL",
    "game": "Ducks @ Oilers",
@@ -501,12 +501,12 @@ window.PAPER_PICKS = {
    "odds": 175,
    "fair": 173,
    "edge": 0.7,
-   "zone": "green",
    "result": "lost",
+   "zone": "green",
    "created": 1793908736057
   },
   {
-   "id": null,
+   "id": "p-20261105-dylan-holloway-anytime-goal-fd",
    "date": "2026-11-05",
    "sport": "NHL",
    "game": "Blues @ Devils",
@@ -515,12 +515,12 @@ window.PAPER_PICKS = {
    "odds": 340,
    "fair": 323,
    "edge": 4.1,
-   "zone": "top",
    "result": "lost",
+   "zone": "top",
    "created": 1793908736053
   },
   {
-   "id": null,
+   "id": "p-20261104-parlay-zion-under-20-5-gustafsson-over-0-5-points-dk",
    "date": "2026-11-04",
    "sport": "Mixed",
    "game": "Jazz @ Pelicans + Sharks @ Kings",
@@ -529,12 +529,12 @@ window.PAPER_PICKS = {
    "odds": 385,
    "fair": 359,
    "edge": 5.8,
-   "zone": "top",
    "result": "lost",
+   "zone": "top",
    "created": 1793837300010
   },
   {
-   "id": null,
+   "id": "p-20261104-santa-clara-m17-5-dk",
    "date": "2026-11-04",
    "sport": "NCAAB",
    "game": "Milwaukee @ Santa Clara",
@@ -543,12 +543,12 @@ window.PAPER_PICKS = {
    "odds": -102,
    "fair": 102,
    "edge": -2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793837300009
   },
   {
-   "id": null,
+   "id": "p-20261104-under-148-5-fd",
    "date": "2026-11-04",
    "sport": "NCAAB",
    "game": "North Dakota State @ Saint Mary's",
@@ -557,12 +557,12 @@ window.PAPER_PICKS = {
    "odds": -105,
    "fair": -101,
    "edge": -1.9,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793837300008
   },
   {
-   "id": null,
+   "id": "p-20261104-loyola-marymount-m7-5-fd",
    "date": "2026-11-04",
    "sport": "NCAAB",
    "game": "Queens @ Loyola Marymount",
@@ -571,12 +571,12 @@ window.PAPER_PICKS = {
    "odds": -112,
    "fair": -111,
    "edge": -0.4,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793837300007
   },
   {
-   "id": null,
+   "id": "p-20261104-matthew-tkachuk-anytime-goal-dk",
    "date": "2026-11-04",
    "sport": "NHL",
    "game": "Blackhawks @ Panthers",
@@ -585,12 +585,12 @@ window.PAPER_PICKS = {
    "odds": 190,
    "fair": 185,
    "edge": 1.8,
-   "zone": "green",
    "result": "lost",
+   "zone": "green",
    "created": 1793837300006
   },
   {
-   "id": null,
+   "id": "p-20261104-erik-gustafsson-over-0-5-points-dk",
    "date": "2026-11-04",
    "sport": "NHL",
    "game": "Sharks @ Kings",
@@ -599,12 +599,12 @@ window.PAPER_PICKS = {
    "odds": 145,
    "fair": 139,
    "edge": 2.7,
-   "zone": "top",
    "result": "won",
+   "zone": "top",
    "created": 1793837300005
   },
   {
-   "id": null,
+   "id": "p-20261104-kon-knueppel-under-12-5-pts-dk",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Hornets @ Nets",
@@ -613,12 +613,12 @@ window.PAPER_PICKS = {
    "odds": 100,
    "fair": 103,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793837300004
   },
   {
-   "id": null,
+   "id": "p-20261104-dillon-brooks-under-16-5-pts-dk",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Trail Blazers @ Suns",
@@ -627,12 +627,12 @@ window.PAPER_PICKS = {
    "odds": -113,
    "fair": -111,
    "edge": -0.9,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793837300003
   },
   {
-   "id": null,
+   "id": "p-20261104-derrick-white-under-16-5-pts-dk",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Bucks @ Celtics",
@@ -641,12 +641,12 @@ window.PAPER_PICKS = {
    "odds": -112,
    "fair": -111,
    "edge": -0.5,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793837300002
   },
   {
-   "id": null,
+   "id": "p-20261104-raptors-p5-5-fd",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Raptors @ Nuggets",
@@ -655,12 +655,12 @@ window.PAPER_PICKS = {
    "odds": -116,
    "fair": -115,
    "edge": -0.5,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793837300001
   },
   {
-   "id": null,
+   "id": "p-20261104-zion-williamson-under-20-5-pts-dk",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Jazz @ Pelicans",
@@ -669,12 +669,12 @@ window.PAPER_PICKS = {
    "odds": -102,
    "fair": -109,
    "edge": 3.1,
-   "zone": "top",
    "result": "lost",
+   "zone": "top",
    "created": 1793837300000
   },
   {
-   "id": null,
+   "id": "p-20261104-rui-hachimura-over-15-5-pts-fd",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Heat @ Clippers",
@@ -683,12 +683,12 @@ window.PAPER_PICKS = {
    "odds": 102,
    "fair": 105,
    "edge": -1.4,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793824859397
   },
   {
-   "id": null,
+   "id": "p-20261104-luka-doncic-over-34-5-pts-fd",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Lakers @ Kings",
@@ -697,12 +697,12 @@ window.PAPER_PICKS = {
    "odds": 100,
    "fair": 103,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793824834538
   },
   {
-   "id": null,
+   "id": "p-20261104-b-montour-over-0-5-points-fd",
    "date": "2026-11-04",
    "sport": "NHL",
    "game": "Flames @ Kraken",
@@ -711,12 +711,12 @@ window.PAPER_PICKS = {
    "odds": 122,
    "fair": 124,
    "edge": -0.9,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793824440000
   },
   {
-   "id": null,
+   "id": "p-20261104-senators-p1-5-fd",
    "date": "2026-11-04",
    "sport": "NHL",
    "game": "Senators @ Sabres",
@@ -725,12 +725,12 @@ window.PAPER_PICKS = {
    "odds": -215,
    "fair": -202,
    "edge": -2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793824440000
   },
   {
-   "id": null,
+   "id": "p-20261104-aaron-nesmith-over-12-5-pts-dk",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Pacers @ Grizzlies",
@@ -739,12 +739,12 @@ window.PAPER_PICKS = {
    "odds": -101,
    "fair": -102,
    "edge": 0.5,
-   "zone": "green",
    "result": "won",
+   "zone": "green",
    "created": 1793823626701
   },
   {
-   "id": null,
+   "id": "p-20261104-over-233-5-fd",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Hawks @ Wizards",
@@ -753,12 +753,12 @@ window.PAPER_PICKS = {
    "odds": -112,
    "fair": -109,
    "edge": -1.5,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793745191646
   },
   {
-   "id": null,
+   "id": "p-20261104-under-234-5-fd",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Bulls @ Knicks",
@@ -767,12 +767,12 @@ window.PAPER_PICKS = {
    "odds": -115,
    "fair": -118,
    "edge": 1,
-   "zone": "green",
    "result": "lost",
+   "zone": "green",
    "created": 1793745191646
   },
   {
-   "id": null,
+   "id": "p-20261104-over-227-fan",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Mavericks @ Spurs",
@@ -781,12 +781,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -105,
    "edge": -2,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793745191646
   },
   {
-   "id": null,
+   "id": "p-20261104-over-223-fan",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Timberwolves @ Rockets",
@@ -795,12 +795,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -107,
    "edge": -1.4,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793716278253
   },
   {
-   "id": null,
+   "id": "p-20261104-over-227-5-dk",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "Cavaliers @ Thunder",
@@ -809,12 +809,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -109,
    "edge": -0.5,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793716278253
   },
   {
-   "id": null,
+   "id": "p-20261104-over-218-5-fd",
    "date": "2026-11-04",
    "sport": "NBA",
    "game": "76ers @ Pistons",
@@ -823,12 +823,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -108,
    "edge": -1,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793716278253
   },
   {
-   "id": null,
+   "id": "p-20261102-grizzlies-ml-fd",
    "date": "2026-11-02",
    "sport": "NBA",
    "game": "Pelicans @ Grizzlies",
@@ -837,12 +837,12 @@ window.PAPER_PICKS = {
    "odds": -178,
    "fair": -176,
    "edge": -0.5,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793661460536
   },
   {
-   "id": null,
+   "id": "p-20261102-over-217-5-dk",
    "date": "2026-11-02",
    "sport": "NBA",
    "game": "Celtics @ Rockets",
@@ -851,12 +851,12 @@ window.PAPER_PICKS = {
    "odds": -116,
    "fair": -111,
    "edge": -2,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793661460536
   },
   {
-   "id": null,
+   "id": "p-20261102-hawks-ml-fd",
    "date": "2026-11-02",
    "sport": "NBA",
    "game": "Hawks @ Pacers",
@@ -865,12 +865,12 @@ window.PAPER_PICKS = {
    "odds": -190,
    "fair": -180,
    "edge": -1.9,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793661460536
   },
   {
-   "id": null,
+   "id": "p-20261102-under-233-5-fd",
    "date": "2026-11-02",
    "sport": "NBA",
    "game": "Kings @ Mavericks",
@@ -879,12 +879,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -108,
    "edge": -1.1,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793661460536
   },
   {
-   "id": null,
+   "id": "p-20261102-over-232-5-fd",
    "date": "2026-11-02",
    "sport": "NBA",
    "game": "Bucks @ Timberwolves",
@@ -893,12 +893,12 @@ window.PAPER_PICKS = {
    "odds": -116,
    "fair": -112,
    "edge": -1.7,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793626500000
   },
   {
-   "id": null,
+   "id": "p-20261101-c-murray-boyles-under-5-5-reb-fd",
    "date": "2026-11-01",
    "sport": "NBA",
    "game": "Raptors @ Lakers",
@@ -907,12 +907,12 @@ window.PAPER_PICKS = {
    "odds": -118,
    "fair": -115,
    "edge": -1.1,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793579100000
   },
   {
-   "id": null,
+   "id": "p-20261101-over-219-5-dk",
    "date": "2026-11-01",
    "sport": "NBA",
    "game": "Clippers @ Warriors",
@@ -921,12 +921,12 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -114,
    "edge": 1.6,
-   "zone": "green",
    "result": "won",
+   "zone": "green",
    "created": 1793578030613
   },
   {
-   "id": null,
+   "id": "p-20261101-steelers-ml-dk",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Browns @ Steelers",
@@ -935,12 +935,12 @@ window.PAPER_PICKS = {
    "odds": -185,
    "fair": -179,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793543582844
   },
   {
-   "id": null,
+   "id": "p-20261101-rams-ml-dk",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Chargers @ Rams",
@@ -949,12 +949,12 @@ window.PAPER_PICKS = {
    "odds": -270,
    "fair": -255,
    "edge": -1.6,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793543582844
   },
   {
-   "id": null,
+   "id": "p-20261101-bills-ml-dk",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Ravens @ Bills",
@@ -963,12 +963,12 @@ window.PAPER_PICKS = {
    "odds": -166,
    "fair": -159,
    "edge": -1.6,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793543582844
   },
   {
-   "id": null,
+   "id": "p-20261101-lions-ml-fd",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Vikings @ Lions",
@@ -977,12 +977,12 @@ window.PAPER_PICKS = {
    "odds": -164,
    "fair": -159,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793543582844
   },
   {
-   "id": null,
+   "id": "p-20261101-tee-higgins-anytime-td-fan",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Titans @ Bengals",
@@ -991,12 +991,12 @@ window.PAPER_PICKS = {
    "odds": 110,
    "fair": 113,
    "edge": -1.3,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793543582844
   },
   {
-   "id": null,
+   "id": "p-20261101-rachaad-white-anytime-td-fan",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Eagles @ Commanders",
@@ -1005,12 +1005,12 @@ window.PAPER_PICKS = {
    "odds": 155,
    "fair": 121,
    "edge": 15.2,
-   "zone": "top",
    "result": "won",
+   "zone": "top",
    "created": 1793367967309
   },
   {
-   "id": null,
+   "id": "p-20261101-a-j-brown-anytime-td-dk",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Patriots @ Dolphins",
@@ -1019,12 +1019,12 @@ window.PAPER_PICKS = {
    "odds": 145,
    "fair": 146,
    "edge": -0.5,
-   "zone": "yellow",
    "result": "push",
+   "zone": "yellow",
    "created": 1793367967309
   },
   {
-   "id": null,
+   "id": "p-20261101-jeremiyah-love-anytime-td-dk",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Cardinals @ Cowboys",
@@ -1033,12 +1033,12 @@ window.PAPER_PICKS = {
    "odds": 145,
    "fair": 147,
    "edge": -0.9,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793367967309
   },
   {
-   "id": null,
+   "id": "p-20261101-d-jones-over-9-5-rush-yds-fan",
    "date": "2026-11-01",
    "sport": "NFL",
    "game": "Colts @ Jaguars",
@@ -1047,12 +1047,12 @@ window.PAPER_PICKS = {
    "odds": 105,
    "fair": 102,
    "edge": 1.4,
-   "zone": "green",
    "result": "lost",
+   "zone": "green",
    "created": 1793367967309
   },
   {
-   "id": null,
+   "id": "p-20261031-spurs-m11-5-fd",
    "date": "2026-10-31",
    "sport": "NBA",
    "game": "Timberwolves @ Spurs",
@@ -1061,12 +1061,12 @@ window.PAPER_PICKS = {
    "odds": -115,
    "fair": -111,
    "edge": -1.7,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793488396007
   },
   {
-   "id": null,
+   "id": "p-20261031-kings-p10-5-fan",
    "date": "2026-10-31",
    "sport": "NBA",
    "game": "Kings @ Grizzlies",
@@ -1075,12 +1075,12 @@ window.PAPER_PICKS = {
    "odds": 100,
    "fair": 103,
    "edge": -1.7,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793488396007
   },
   {
-   "id": null,
+   "id": "p-20261031-cavaliers-ml-fd",
    "date": "2026-10-31",
    "sport": "NBA",
    "game": "Cavaliers @ Bucks",
@@ -1089,12 +1089,12 @@ window.PAPER_PICKS = {
    "odds": -335,
    "fair": -315,
    "edge": -1.4,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793488396007
   },
   {
-   "id": null,
+   "id": "p-20261031-rockets-ml-fd",
    "date": "2026-10-31",
    "sport": "NBA",
    "game": "Thunder @ Rockets",
@@ -1103,12 +1103,12 @@ window.PAPER_PICKS = {
    "odds": -138,
    "fair": -134,
    "edge": -1.3,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793488396007
   },
   {
-   "id": null,
+   "id": "p-20261031-nebraska-ml-dk",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Washington @ Nebraska",
@@ -1117,12 +1117,12 @@ window.PAPER_PICKS = {
    "odds": -298,
    "fair": -278,
    "edge": -1.8,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793459280883
   },
   {
-   "id": null,
+   "id": "p-20261031-oregon-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Northwestern @ Oregon",
@@ -1131,12 +1131,12 @@ window.PAPER_PICKS = {
    "odds": -166,
    "fair": -167,
    "edge": 0.2,
-   "zone": "green",
    "result": "won",
+   "zone": "green",
    "created": 1793459280883
   },
   {
-   "id": null,
+   "id": "p-20261031-oregon-state-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Oregon State @ Fresno State",
@@ -1145,12 +1145,12 @@ window.PAPER_PICKS = {
    "odds": -215,
    "fair": -208,
    "edge": -1.1,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793459280883
   },
   {
-   "id": null,
+   "id": "p-20261031-georgia-state-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Coastal Carolina @ Georgia State",
@@ -1159,12 +1159,12 @@ window.PAPER_PICKS = {
    "odds": -162,
    "fair": -163,
    "edge": 0.2,
-   "zone": "green",
    "result": "lost",
+   "zone": "green",
    "created": 1793459280883
   },
   {
-   "id": null,
+   "id": "p-20261031-florida-state-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Clemson @ Florida State",
@@ -1173,12 +1173,12 @@ window.PAPER_PICKS = {
    "odds": -215,
    "fair": -205,
    "edge": -1.5,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793459280883
   },
   {
-   "id": null,
+   "id": "p-20261031-nc-state-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "California @ NC State",
@@ -1187,12 +1187,12 @@ window.PAPER_PICKS = {
    "odds": -300,
    "fair": -279,
    "edge": -1.8,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793459280883
   },
   {
-   "id": null,
+   "id": "p-20261031-louisiana-tech-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Louisiana Tech @ South Alabama",
@@ -1201,12 +1201,12 @@ window.PAPER_PICKS = {
    "odds": -220,
    "fair": -215,
    "edge": -0.7,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793459280883
   },
   {
-   "id": null,
+   "id": "p-20261031-pittsburgh-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Georgia Tech @ Pittsburgh",
@@ -1215,12 +1215,12 @@ window.PAPER_PICKS = {
    "odds": -295,
    "fair": -282,
    "edge": -1.1,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793459280883
   },
   {
-   "id": null,
+   "id": "p-20261031-oklahoma-state-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Oklahoma State @ Iowa State",
@@ -1229,12 +1229,12 @@ window.PAPER_PICKS = {
    "odds": -345,
    "fair": -321,
    "edge": -1.6,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-iowa-ml-fan",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Wisconsin @ Iowa",
@@ -1243,12 +1243,12 @@ window.PAPER_PICKS = {
    "odds": -130,
    "fair": -124,
    "edge": -1.9,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-utah-state-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Colorado State @ Utah State",
@@ -1257,12 +1257,12 @@ window.PAPER_PICKS = {
    "odds": -225,
    "fair": -216,
    "edge": -1.3,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-southern-miss-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Southern Miss @ Louisiana-Monroe",
@@ -1271,12 +1271,12 @@ window.PAPER_PICKS = {
    "odds": -160,
    "fair": -152,
    "edge": -2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-texas-tech-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Arizona @ Texas Tech",
@@ -1285,12 +1285,12 @@ window.PAPER_PICKS = {
    "odds": -162,
    "fair": -157,
    "edge": -1.2,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-oklahoma-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "South Carolina @ Oklahoma",
@@ -1299,12 +1299,12 @@ window.PAPER_PICKS = {
    "odds": -156,
    "fair": -151,
    "edge": -1.3,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-over-43-5-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Nevada @ UCLA",
@@ -1313,12 +1313,12 @@ window.PAPER_PICKS = {
    "odds": -106,
    "fair": -102,
    "edge": -2,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-illinois-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Illinois @ Maryland",
@@ -1327,12 +1327,12 @@ window.PAPER_PICKS = {
    "odds": -126,
    "fair": -121,
    "edge": -1.6,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-missouri-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Missouri @ Arkansas",
@@ -1341,12 +1341,12 @@ window.PAPER_PICKS = {
    "odds": -360,
    "fair": -338,
    "edge": -1.4,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-penn-state-ml-dk",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Purdue @ Penn State",
@@ -1355,12 +1355,12 @@ window.PAPER_PICKS = {
    "odds": -375,
    "fair": -349,
    "edge": -1.5,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793412449245
   },
   {
-   "id": null,
+   "id": "p-20261031-tcu-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Kansas @ TCU",
@@ -1369,12 +1369,12 @@ window.PAPER_PICKS = {
    "odds": -220,
    "fair": -217,
    "edge": -0.5,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793410423375
   },
   {
-   "id": null,
+   "id": "p-20261031-colorado-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Kansas State @ Colorado",
@@ -1383,12 +1383,12 @@ window.PAPER_PICKS = {
    "odds": -115,
    "fair": -112,
    "edge": -1.3,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793410423375
   },
   {
-   "id": null,
+   "id": "p-20261031-ohio-state-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Ohio State @ USC",
@@ -1397,12 +1397,12 @@ window.PAPER_PICKS = {
    "odds": -220,
    "fair": -221,
    "edge": 0.1,
-   "zone": "green",
    "result": "lost",
+   "zone": "green",
    "created": 1793410423375
   },
   {
-   "id": null,
+   "id": "p-20261031-east-carolina-ml-fd",
    "date": "2026-10-31",
    "sport": "NCAAF",
    "game": "Temple @ East Carolina",
@@ -1411,12 +1411,12 @@ window.PAPER_PICKS = {
    "odds": -188,
    "fair": -188,
    "edge": -0.1,
-   "zone": "yellow",
    "result": "won",
+   "zone": "yellow",
    "created": 1793410423375
   },
   {
-   "id": null,
+   "id": "p-20261030-kent-state-ml-dk",
    "date": "2026-10-30",
    "sport": "NCAAF",
    "game": "Kent State @ Sacramento State",
@@ -1425,8 +1425,8 @@ window.PAPER_PICKS = {
    "odds": -290,
    "fair": -275,
    "edge": -1.3,
-   "zone": "yellow",
    "result": "lost",
+   "zone": "yellow",
    "created": 1793412449245
   }
  ]
