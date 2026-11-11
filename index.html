@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Scott's Paper Picks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #EDF0F3; --panel: #FFFFFF; --ink: #15212C; --muted: #5A6976; --line: #D3DAE0;
+  --win: #1D7A45; --win-soft: #DDF1E5;
+  --yellow: #8A5A00; --yellow-soft: #F6E7C8; --top: #0B5A2B; --top-soft: #C3E9D0;
+  --focus: #2F6FD0;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F151B; --panel: #17202A; --ink: #E5ECF1; --muted: #93A2AE; --line: #29353F;
+    --win: #55C98C; --win-soft: #15322A;
+    --yellow: #F0B23A; --yellow-soft: #3A2C12; --top: #9FF0C2; --top-soft: #10452A;
+    --focus: #7FA9F0;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); padding: 24px 16px 56px; }
+.wrap { max-width: 1040px; margin: 0 auto; display: grid; gap: 20px; }
+h1 { font: 700 clamp(38px, 8vw, 60px)/.95 var(--display); text-transform: uppercase; letter-spacing: .01em; margin: 0; }
+h2 { font: 700 20px/1.1 var(--display); text-transform: uppercase; letter-spacing: .04em; margin: 0; }
+.lede { margin: 8px 0 0; color: var(--muted); max-width: 60ch; }
+.lede b { color: var(--ink); font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Sport tabs */
+.tabs { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 8px 0; display: flex; gap: 6px; overflow-x: auto; }
+.tab { flex: none; font: 700 17px/1 var(--display); letter-spacing: .04em; text-transform: uppercase; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+.tab small { font: 500 12px var(--body); color: var(--muted); margin-left: 6px; letter-spacing: 0; }
+.tab[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tab[aria-pressed="true"] small { color: inherit; opacity: .75; }
+button:focus-visible, summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* Filters */
+.finder { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: end; }
+.finder label { display: grid; gap: 2px; font-size: 12px; color: var(--muted); flex: 1 1 140px; min-width: 0; }
+.finder label.q { flex: 2 1 220px; }
+.finder input, .finder select { font: inherit; font-size: 15px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 0 10px; min-height: 44px; width: 100%; min-width: 0; }
+.finder input:focus-visible, .finder select:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.finder select.on { border-color: var(--ink); font-weight: 600; }
+.clear { font: inherit; font-size: 14px; min-height: 44px; padding: 0 12px; border: 0; background: none; color: var(--focus); text-decoration: underline; cursor: pointer; }
+.showing { margin: 0; font-size: 13px; color: var(--muted); }
+.showing b { color: var(--ink); font-weight: 600; }
+@media (max-width: 560px) { .finder label { flex: 1 1 calc(50% - 4px); } .finder label.q { flex-basis: 100%; } }
+
+/* Pick tables */
+.day { display: grid; gap: 8px; }
+.day-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.day-head .sub { color: var(--muted); font-size: 13px; }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 12px; font-weight: 600; color: var(--muted); }
+th.n, td.n { text-align: right; }
+.bet { font-weight: 600; }
+.game { color: var(--muted); font-size: 12px; }
+.chip { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.chip.top { background: var(--top-soft); color: var(--top); }
+.chip.green { background: var(--win-soft); color: var(--win); }
+.chip.yellow { background: var(--yellow-soft); color: var(--yellow); }
+.chip.none { background: var(--bg); color: var(--muted); }
+@media (min-width: 721px) {
+  table { table-layout: fixed; }
+  th:nth-child(1) { width: 40%; } th:nth-child(2) { width: 16%; } th:nth-child(3) { width: 13%; }
+  th:nth-child(4) { width: 13%; } th:nth-child(5) { width: 18%; }
+}
+@media (max-width: 720px) {
+  thead { display: none; }
+  table, tbody { display: block; }
+  tr { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; padding: 12px; border-bottom: 1px solid var(--line); }
+  tr:last-child { border-bottom: 0; }
+  td { padding: 0; border: 0; text-align: left !important; }
+  td.c-bet { flex: 1 0 100%; }
+  td[data-k]::before { content: attr(data-k) " "; color: var(--muted); font-size: 12px; }
+  td.c-edge { margin-left: auto; }
+}
+
+.empty { padding: 28px 16px; text-align: center; color: var(--muted); background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+details { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
+summary { cursor: pointer; font-weight: 600; }
+dl { margin: 12px 0 0; display: grid; gap: 10px; max-width: 70ch; }
+dt { font-weight: 600; } dd { margin: 0; color: var(--muted); }
+footer { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Scott's Paper Picks</h1>
+    <p class="lede"><b>Practice picks. No real money.</b> Each pick is a price at DraftKings or FanDuel that I compared to the fair price.</p>
+  </header>
+
+  <nav class="tabs" id="tabs" aria-label="Sports"></nav>
+
+  <section class="finder" aria-label="Filter picks">
+    <label class="q">Search<input id="f-q" type="search" placeholder="Team or bet" autocomplete="off" enterkeyhint="search"></label>
+    <label>Date<select id="f-date">
+      <option value="all">All dates</option><option value="today" selected>Today</option><option value="yday">Yesterday</option><option value="7d">Last 7 days</option><option value="30d">Last 30 days</option>
+    </select></label>
+    <label>Edge<select id="f-zone">
+      <option value="all">Any edge</option><option value="top">Top Pick</option><option value="green">Green</option><option value="yellow">Yellow</option>
+    </select></label>
+    <button type="button" class="clear" id="f-clear" hidden>Reset filters</button>
+  </section>
+  <p class="showing" id="showing" aria-live="polite"></p>
+
+  <main id="list" class="wrap"><div class="empty">Loading picks…</div></main>
+
+  <details>
+    <summary>How to read this page</summary>
+    <dl>
+      <div><dt>Price</dt><dd>The odds at the sportsbook. −110 means bet 110 to win 100. +150 means bet 100 to win 150.</dd></div>
+      <div><dt>Fair price</dt><dd>What the odds would be if the sportsbook took no cut. Like a coin flip paying even money.</dd></div>
+      <div><dt>Edge</dt><dd>How the price compares to the fair price. Top Pick is +2% or better. Green is 0% to +1.9%. Yellow is a close call, a little under 0%.</dd></div>
+    </dl>
+  </details>
+
+  <footer><p id="updated"></p></footer>
+</div>
+
+<script>
+(function () {
+  var TABS = [["ALL", "All"], ["NBA", "NBA"], ["NFL", "NFL"], ["NHL", "NHL"], ["NCAAF", "CFB"], ["NCAAB", "CBB"]];
+  var ZONE = { top: "Top Pick", green: "Green", yellow: "Yellow" };
+  var DATE_NAMES = { all: "All dates", today: "Today", yday: "Yesterday", "7d": "Last 7 days", "30d": "Last 30 days" };
+  var state = { bets: [], sport: "ALL", q: "", date: "today", zone: "all" };
+  var $ = function (id) { return document.getElementById(id); };
+
+  function odds(a) { return a == null ? "–" : (a > 0 ? "+" : "−") + Math.abs(a); }
+  function signed(n) { return (n > 0.004 ? "+" : n < -0.004 ? "−" : "") + Math.abs(n).toFixed(1) + "%"; }
+  function node(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function day(s) {
+    var m = /^(\d{4})-(\d\d)-(\d\d)$/.exec(s || "");
+    if (!m) return s || "No date";
+    return new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" });
+  }
+  function ymdAgo(n) { var d = new Date(); d.setDate(d.getDate() - n); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function dateOk(b) {
+    var d = String(b.date || ""), f = state.date;
+    if (f === "today") return d === ymdAgo(0);
+    if (f === "yday") return d === ymdAgo(1);
+    if (f === "7d") return d >= ymdAgo(6);
+    if (f === "30d") return d >= ymdAgo(29);
+    return true;
+  }
+  function norm(x) { return String(x || "").toLowerCase().replace(/[−–]/g, "-"); }
+  function passes(b, skipSport) {
+    if (!skipSport && state.sport !== "ALL" && b.sport !== state.sport) return false;
+    if (!dateOk(b)) return false;
+    if (state.zone !== "all" && b.zone !== state.zone) return false;
+    var q = norm(state.q).trim();
+    if (q) { var hay = norm([b.desc, b.game, b.book, b.sport].join(" ")); if (!q.split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; })) return false; }
+    return true;
+  }
+  function filtersOn() { return !!(state.q.trim() || state.date !== "today" || state.zone !== "all"); }
+
+  function renderTabs() {
+    var nav = $("tabs"); nav.textContent = "";
+    TABS.forEach(function (t) {
+      var n = state.bets.filter(function (b) { return passes(b, true) && (t[0] === "ALL" || b.sport === t[0]); }).length;
+      var btn = node("button", "tab", t[1]);
+      btn.type = "button"; btn.setAttribute("aria-pressed", String(state.sport === t[0]));
+      btn.appendChild(node("small", "", String(n)));
+      btn.addEventListener("click", function () { state.sport = t[0]; render(); });
+      nav.appendChild(btn);
+    });
+  }
+
+  function table(rows) {
+    var box = node("div", "box"), tb = node("table"), head = node("thead"), hr = node("tr");
+    [["Pick", ""], ["Book", ""], ["Price", "n"], ["Fair price", "n"], ["Edge", ""]].forEach(function (h) { hr.appendChild(node("th", h[1], h[0])); });
+    head.appendChild(hr); tb.appendChild(head);
+    var body = node("tbody");
+    rows.forEach(function (b) {
+      var tr = node("tr");
+      var c = node("td", "c-bet"); c.appendChild(node("div", "bet", b.desc)); c.appendChild(node("div", "game", b.game)); tr.appendChild(c);
+      tr.appendChild(node("td", "", b.book));
+      var p = node("td", "n num", odds(b.odds)); p.setAttribute("data-k", "Price"); tr.appendChild(p);
+      var f = node("td", "n num", odds(b.fair)); f.setAttribute("data-k", "Fair"); tr.appendChild(f);
+      var e = node("td", "c-edge");
+      if (b.edge != null) e.appendChild(node("span", "chip num " + (ZONE[b.zone] ? b.zone : "none"), (ZONE[b.zone] ? ZONE[b.zone] + " " : "") + signed(b.edge)));
+      tr.appendChild(e);
+      body.appendChild(tr);
+    });
+    tb.appendChild(body); box.appendChild(tb);
+    return box;
+  }
+
+  function render() {
+    renderTabs();
+    var rows = state.bets.filter(function (b) { return passes(b, false); });
+    $("f-date").classList.toggle("on", state.date !== "today");
+    $("f-zone").classList.toggle("on", state.zone !== "all");
+    $("f-clear").hidden = !filtersOn();
+    var sp = TABS.filter(function (t) { return t[0] === state.sport; })[0][1];
+    var sh = $("showing"); sh.textContent = "Showing ";
+    sh.appendChild(node("b", "", rows.length + " pick" + (rows.length === 1 ? "" : "s")));
+    sh.appendChild(document.createTextNode(" · " + (sp === "All" ? "All sports" : sp) + " · " + DATE_NAMES[state.date] + "."));
+
+    var list = $("list"); list.textContent = "";
+    if (!rows.length) {
+      var onlyToday = state.date === "today" && !state.q.trim() && state.zone === "all";
+      list.appendChild(node("div", "empty", onlyToday ? "No picks today yet. Pick “All dates” above to see past picks." : "No picks match these filters. Reset filters to start over."));
+      return;
+    }
+    var groups = [], seen = {};
+    rows.forEach(function (b) { if (!seen[b.date]) { seen[b.date] = { date: b.date, rows: [] }; groups.push(seen[b.date]); } seen[b.date].rows.push(b); });
+    groups.forEach(function (g) {
+      var sec = node("section", "day"), h = node("div", "day-head");
+      h.appendChild(node("h2", "", day(g.date)));
+      h.appendChild(node("span", "sub num", g.rows.length + " pick" + (g.rows.length === 1 ? "" : "s")));
+      sec.appendChild(h); sec.appendChild(table(g.rows)); list.appendChild(sec);
+    });
+  }
+
+  $("f-q").addEventListener("input", function (e) { state.q = e.target.value; render(); });
+  ["date", "zone"].forEach(function (k) { $("f-" + k).addEventListener("change", function (e) { state[k] = e.target.value; render(); }); });
+  $("f-clear").addEventListener("click", function () {
+    state.q = ""; state.date = "today"; state.zone = "all";
+    $("f-q").value = ""; $("f-date").value = "today"; $("f-zone").value = "all";
+    render(); $("f-q").focus();
+  });
+
+  function start(data) {
+    state.bets = (data.bets || []).slice().sort(function (a, b) {
+      var d = String(b.date || "").localeCompare(String(a.date || ""));
+      return d || (b.created || 0) - (a.created || 0);
+    });
+    $("updated").textContent = data.updated ? "Updated " + data.updated + "." : "";
+    render();
+  }
+
+  /* The data is a plain script file so the page also opens with a double-click. ?t= skips old saved copies. */
+  var s = document.createElement("script");
+  s.src = "bets.js?t=" + Date.now();
+  s.onload = function () { if (window.PAPER_PICKS) start(window.PAPER_PICKS); else s.onerror(); };
+  s.onerror = function () { var l = $("list"); l.textContent = ""; l.appendChild(node("div", "empty", "The picks did not load. Refresh the page to try again.")); };
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
