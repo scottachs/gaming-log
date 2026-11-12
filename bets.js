@@ -1,5 +1,5 @@
 window.PAPER_PICKS = {
- "updated": "Nov 11, 2026, 7:50 PM ET",
+ "updated": "Nov 12, 2026, 2:07 PM ET",
  "bets": [
   {
    "id": "p-20261111-over-6-5-dk",
@@ -11,7 +11,7 @@ window.PAPER_PICKS = {
    "odds": 110,
    "fair": 112,
    "edge": -1.1,
-   "result": "open",
+   "result": "lost",
    "zone": "yellow",
    "created": 1794444518570
   },
@@ -25,7 +25,7 @@ window.PAPER_PICKS = {
    "odds": -136,
    "fair": -132,
    "edge": -1.4,
-   "result": "open",
+   "result": "won",
    "zone": "yellow",
    "created": 1794438100000
   },
@@ -39,7 +39,7 @@ window.PAPER_PICKS = {
    "odds": -250,
    "fair": -237,
    "edge": -1.6,
-   "result": "open",
+   "result": "won",
    "zone": "yellow",
    "created": 1794438100000
   },
@@ -53,7 +53,7 @@ window.PAPER_PICKS = {
    "odds": -134,
    "fair": -130,
    "edge": -1.4,
-   "result": "open",
+   "result": "lost",
    "zone": "yellow",
    "created": 1794435960000
   },
@@ -67,7 +67,7 @@ window.PAPER_PICKS = {
    "odds": -255,
    "fair": -241,
    "edge": -1.7,
-   "result": "open",
+   "result": "won",
    "zone": "yellow",
    "created": 1794435393510
   },
@@ -81,7 +81,7 @@ window.PAPER_PICKS = {
    "odds": -155,
    "fair": -149,
    "edge": -1.6,
-   "result": "open",
+   "result": "won",
    "zone": "yellow",
    "created": 1794435393509
   },
@@ -95,7 +95,7 @@ window.PAPER_PICKS = {
    "odds": -360,
    "fair": -334,
    "edge": -1.6,
-   "result": "open",
+   "result": "won",
    "zone": "yellow",
    "created": 1794435393508
   },
@@ -109,7 +109,7 @@ window.PAPER_PICKS = {
    "odds": -110,
    "fair": -107,
    "edge": -1.2,
-   "result": "open",
+   "result": "won",
    "zone": "yellow",
    "created": 1794435393507
   },
@@ -123,7 +123,7 @@ window.PAPER_PICKS = {
    "odds": -320,
    "fair": -321,
    "edge": 0,
-   "result": "open",
+   "result": "won",
    "zone": "green",
    "created": 1794435393506
   },
@@ -137,7 +137,7 @@ window.PAPER_PICKS = {
    "odds": -225,
    "fair": -213,
    "edge": -1.7,
-   "result": "open",
+   "result": "lost",
    "zone": "yellow",
    "created": 1794425760000
   },
@@ -151,7 +151,7 @@ window.PAPER_PICKS = {
    "odds": -194,
    "fair": -184,
    "edge": -1.7,
-   "result": "open",
+   "result": "won",
    "zone": "yellow",
    "created": 1794425760000
   },
