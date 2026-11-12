@@ -1,6 +1,20 @@
 window.PAPER_PICKS = {
- "updated": "Nov 11, 2026, 6:03 PM ET",
+ "updated": "Nov 11, 2026, 7:50 PM ET",
  "bets": [
+  {
+   "id": "p-20261111-over-6-5-dk",
+   "date": "2026-11-11",
+   "sport": "NHL",
+   "game": "Flyers @ Oilers",
+   "desc": "Over 6.5",
+   "book": "DraftKings",
+   "odds": 110,
+   "fair": 112,
+   "edge": -1.1,
+   "result": "open",
+   "zone": "yellow",
+   "created": 1794444518570
+  },
   {
    "id": "p-20261111-trail-blazers-ml-fd",
    "date": "2026-11-11",
