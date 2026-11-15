@@ -50,6 +50,8 @@ button:focus-visible, summary:focus-visible { outline: 2px solid var(--focus); o
 .finder input, .finder select { font: inherit; font-size: 15px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 0 10px; min-height: 44px; width: 100%; min-width: 0; }
 .finder input:focus-visible, .finder select:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
 .finder select.on { border-color: var(--ink); font-weight: 600; }
+.apply { font: 600 15px var(--body); min-height: 44px; padding: 0 20px; border: 1px solid var(--ink); border-radius: 8px; background: var(--ink); color: var(--bg); cursor: pointer; }
+.apply:disabled { background: var(--win-soft); color: var(--win); border-color: var(--win-soft); cursor: default; }
 .clear { font: inherit; font-size: 14px; min-height: 44px; padding: 0 12px; border: 0; background: none; color: var(--focus); text-decoration: underline; cursor: pointer; }
 .showing { margin: 0; font-size: 13px; color: var(--muted); }
 .showing b { color: var(--ink); font-weight: 600; }
@@ -123,10 +125,11 @@ footer { color: var(--muted); font-size: 13px; }
   <section class="finder" aria-label="Filter picks">
     <label class="q">Search<input id="f-q" type="search" placeholder="Team or bet" autocomplete="off" enterkeyhint="search"></label>
     <label>Date<select id="f-date">
-      <option value="all">All dates</option><option value="today" selected>Today</option><option value="yday">Yesterday</option><option value="7d">Last 7 days</option><option value="30d">Last 30 days</option><option value="range">Custom range…</option>
+      <option value="today">Today</option><option value="yday">Yesterday</option><option value="7d" selected>Last 7 days</option><option value="30d">Last 30 days</option><option value="all">All dates</option><option value="range">Custom range…</option>
     </select></label>
     <label id="rg-from-l" hidden>From<input id="rg-from" type="date"></label>
     <label id="rg-to-l" hidden>To<input id="rg-to" type="date"></label>
+    <button type="button" class="apply" id="rg-apply" hidden>Apply</button>
     <label>Edge<select id="f-zone">
       <option value="all">Any edge</option><option value="top">Top Pick</option><option value="green">Green</option><option value="yellow">Yellow</option>
     </select></label>
@@ -153,7 +156,7 @@ footer { color: var(--muted); font-size: 13px; }
   var TABS = [["ALL", "All"], ["NBA", "NBA"], ["NFL", "NFL"], ["NHL", "NHL"], ["NCAAF", "CFB"], ["NCAAB", "CBB"]];
   var ZONE = { top: "Top Pick", green: "Green", yellow: "Yellow" };
   var DATE_NAMES = { all: "All dates", today: "Today", yday: "Yesterday", "7d": "Last 7 days", "30d": "Last 30 days" };
-  var state = { bets: [], sport: "ALL", q: "", date: "today", zone: "all", from: "", to: "" };
+  var state = { bets: [], sport: "ALL", q: "", date: "7d", zone: "all", from: "", to: "" };
   var $ = function (id) { return document.getElementById(id); };
 
   function odds(a) { return a == null ? "–" : (a > 0 ? "+" : "−") + Math.abs(a); }
@@ -171,6 +174,7 @@ footer { color: var(--muted); font-size: 13px; }
     if (f === "yday") return d === ymdAgo(1);
     if (f === "7d") return d >= ymdAgo(6);
     if (f === "30d") return d >= ymdAgo(29);
+    if (f.indexOf("day:") === 0) return d === f.slice(4);
     if (f === "range") return (!state.from || d >= state.from) && (!state.to || d <= state.to);
     return true;
   }
@@ -181,7 +185,12 @@ footer { color: var(--muted); font-size: 13px; }
     if (+m[1] !== new Date().getFullYear()) o.year = "numeric";
     return new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString("en-US", o);
   }
+  function pd(s) {
+    var m = /^(\d{4})-(\d\d)-(\d\d)$/.exec(s || "");
+    return m ? new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) : (s || "");
+  }
   function dateLabel() {
+    if (state.date.indexOf("day:") === 0) return pd(state.date.slice(4));
     if (state.date !== "range") return DATE_NAMES[state.date];
     if (state.from && state.to) return short(state.from) + " – " + short(state.to);
     if (state.from) return "From " + short(state.from);
@@ -197,7 +206,7 @@ footer { color: var(--muted); font-size: 13px; }
     if (q) { var hay = norm([b.desc, b.game, b.book, b.sport].join(" ")); if (!q.split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; })) return false; }
     return true;
   }
-  function filtersOn() { return !!(state.q.trim() || state.date !== "today" || state.zone !== "all"); }
+  function filtersOn() { return !!(state.q.trim() || state.date !== "7d" || state.zone !== "all"); }
 
   function renderTabs() {
     var nav = $("tabs"); nav.textContent = "";
@@ -239,9 +248,10 @@ footer { color: var(--muted); font-size: 13px; }
   function render() {
     renderTabs();
     var rows = state.bets.filter(function (b) { return passes(b, false); });
-    $("f-date").classList.toggle("on", state.date !== "today");
+    $("f-date").classList.toggle("on", state.date !== "7d");
     $("f-zone").classList.toggle("on", state.zone !== "all");
-    $("rg-from-l").hidden = $("rg-to-l").hidden = state.date !== "range";
+    $("rg-from-l").hidden = $("rg-to-l").hidden = $("rg-apply").hidden = state.date !== "range";
+    syncRange();
     $("f-clear").hidden = !filtersOn();
     var sp = TABS.filter(function (t) { return t[0] === state.sport; })[0][1];
     var sh = $("showing"); sh.textContent = "Showing ";
@@ -265,22 +275,49 @@ footer { color: var(--muted); font-size: 13px; }
   }
 
   $("f-q").addEventListener("input", function (e) { state.q = e.target.value; render(); });
-  ["date", "zone"].forEach(function (k) { $("f-" + k).addEventListener("change", function (e) {
-    state[k] = e.target.value;
-    if (k === "date" && state.date === "range" && !state.from && !state.to) { state.from = ymdAgo(6); state.to = ymdAgo(0); $("rg-from").value = state.from; $("rg-to").value = state.to; }
-    render();
-  }); });
-  function onRange() {
-    var f = $("rg-from").value, t = $("rg-to").value;
-    if (f && t && f > t) { var x = f; f = t; t = x; $("rg-from").value = f; $("rg-to").value = t; }
-    state.from = f; state.to = t; render();
+  var rangeDirty = false;
+  var SAVE_KEY = "hfs.dateFilter";
+  function save() { try { localStorage.setItem(SAVE_KEY, JSON.stringify({ date: state.date, from: state.from, to: state.to })); } catch (e) { /* storage blocked */ } }
+  function syncRange() {
+    if (state.date !== "range") return;
+    if (!rangeDirty) { $("rg-from").value = state.from; $("rg-to").value = state.to; }
+    var ab = $("rg-apply");
+    ab.disabled = !rangeDirty;
+    ab.textContent = rangeDirty ? "Apply" : "Applied ✓";
   }
-  $("rg-from").addEventListener("change", onRange);
-  $("rg-to").addEventListener("change", onRange);
+  function markDirty() {
+    rangeDirty = $("rg-from").value !== state.from || $("rg-to").value !== state.to;
+    syncRange();
+  }
+  function applyRange() {
+    var f = $("rg-from").value, t = $("rg-to").value;
+    if (f && t && f > t) { var x = f; f = t; t = x; }
+    state.from = f; state.to = t; rangeDirty = false; save(); render();
+  }
+  $("f-date").addEventListener("change", function (e) {
+    state.date = e.target.value;
+    if (state.date === "range" && !state.from && !state.to) { state.from = ymdAgo(6); state.to = ymdAgo(0); }
+    rangeDirty = false; save(); render();
+  });
+  $("f-zone").addEventListener("change", function (e) { state.zone = e.target.value; render(); });
+  ["rg-from", "rg-to"].forEach(function (id) {
+    $(id).addEventListener("input", markDirty);
+    $(id).addEventListener("change", markDirty);
+    $(id).addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); applyRange(); } });
+  });
+  $("rg-apply").addEventListener("click", applyRange);
+  (function restore() {
+    try {
+      var sv = JSON.parse(localStorage.getItem(SAVE_KEY) || "null");
+      if (sv && /^(today|yday|7d|30d|all|range|day:\d{4}-\d\d-\d\d)$/.test(sv.date)) {
+        state.date = sv.date; state.from = /^\d{4}-\d\d-\d\d$/.test(sv.from) ? sv.from : ""; state.to = /^\d{4}-\d\d-\d\d$/.test(sv.to) ? sv.to : "";
+      }
+    } catch (e) { /* storage blocked or bad value: start on Last 7 days */ }
+  })();
   $("f-clear").addEventListener("click", function () {
-    state.q = ""; state.date = "today"; state.zone = "all"; state.from = ""; state.to = "";
+    state.q = ""; state.date = "7d"; state.zone = "all"; state.from = ""; state.to = ""; rangeDirty = false; save();
     $("rg-from").value = ""; $("rg-to").value = "";
-    $("f-q").value = ""; $("f-date").value = "today"; $("f-zone").value = "all";
+    $("f-q").value = ""; $("f-date").value = "7d"; $("f-zone").value = "all";
     render(); $("f-q").focus();
   });
 
@@ -289,6 +326,16 @@ footer { color: var(--muted); font-size: 13px; }
       var d = String(b.date || "").localeCompare(String(a.date || ""));
       return d || (b.created || 0) - (a.created || 0);
     });
+    var old = document.getElementById("f-days"); if (old) old.remove();
+    var seenD = {}; state.bets.forEach(function (b) { if (b.date) seenD[b.date] = 1; });
+    var keys = Object.keys(seenD).sort().reverse();
+    if (keys.length) {
+      var g = document.createElement("optgroup"); g.id = "f-days"; g.label = "Pick one game date";
+      keys.forEach(function (d) { var o = document.createElement("option"); o.value = "day:" + d; o.textContent = pd(d); g.appendChild(o); });
+      $("f-date").appendChild(g);
+    }
+    $("f-date").value = state.date;
+    if ($("f-date").value !== state.date) { state.date = "7d"; $("f-date").value = "7d"; }
     $("updated").textContent = data.updated ? "Updated " + data.updated + "." : "";
     render();
   }
