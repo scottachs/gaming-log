@@ -123,8 +123,10 @@ footer { color: var(--muted); font-size: 13px; }
   <section class="finder" aria-label="Filter picks">
     <label class="q">Search<input id="f-q" type="search" placeholder="Team or bet" autocomplete="off" enterkeyhint="search"></label>
     <label>Date<select id="f-date">
-      <option value="all">All dates</option><option value="today" selected>Today</option><option value="yday">Yesterday</option><option value="7d">Last 7 days</option><option value="30d">Last 30 days</option>
+      <option value="all">All dates</option><option value="today" selected>Today</option><option value="yday">Yesterday</option><option value="7d">Last 7 days</option><option value="30d">Last 30 days</option><option value="range">Custom range…</option>
     </select></label>
+    <label id="rg-from-l" hidden>From<input id="rg-from" type="date"></label>
+    <label id="rg-to-l" hidden>To<input id="rg-to" type="date"></label>
     <label>Edge<select id="f-zone">
       <option value="all">Any edge</option><option value="top">Top Pick</option><option value="green">Green</option><option value="yellow">Yellow</option>
     </select></label>
@@ -151,7 +153,7 @@ footer { color: var(--muted); font-size: 13px; }
   var TABS = [["ALL", "All"], ["NBA", "NBA"], ["NFL", "NFL"], ["NHL", "NHL"], ["NCAAF", "CFB"], ["NCAAB", "CBB"]];
   var ZONE = { top: "Top Pick", green: "Green", yellow: "Yellow" };
   var DATE_NAMES = { all: "All dates", today: "Today", yday: "Yesterday", "7d": "Last 7 days", "30d": "Last 30 days" };
-  var state = { bets: [], sport: "ALL", q: "", date: "today", zone: "all" };
+  var state = { bets: [], sport: "ALL", q: "", date: "today", zone: "all", from: "", to: "" };
   var $ = function (id) { return document.getElementById(id); };
 
   function odds(a) { return a == null ? "–" : (a > 0 ? "+" : "−") + Math.abs(a); }
@@ -169,7 +171,22 @@ footer { color: var(--muted); font-size: 13px; }
     if (f === "yday") return d === ymdAgo(1);
     if (f === "7d") return d >= ymdAgo(6);
     if (f === "30d") return d >= ymdAgo(29);
+    if (f === "range") return (!state.from || d >= state.from) && (!state.to || d <= state.to);
     return true;
+  }
+  function short(s) {
+    var m = /^(\d{4})-(\d\d)-(\d\d)$/.exec(s || "");
+    if (!m) return s || "";
+    var o = { month: "short", day: "numeric" };
+    if (+m[1] !== new Date().getFullYear()) o.year = "numeric";
+    return new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString("en-US", o);
+  }
+  function dateLabel() {
+    if (state.date !== "range") return DATE_NAMES[state.date];
+    if (state.from && state.to) return short(state.from) + " – " + short(state.to);
+    if (state.from) return "From " + short(state.from);
+    if (state.to) return "Through " + short(state.to);
+    return "Custom range";
   }
   function norm(x) { return String(x || "").toLowerCase().replace(/[−–]/g, "-"); }
   function passes(b, skipSport) {
@@ -224,11 +241,12 @@ footer { color: var(--muted); font-size: 13px; }
     var rows = state.bets.filter(function (b) { return passes(b, false); });
     $("f-date").classList.toggle("on", state.date !== "today");
     $("f-zone").classList.toggle("on", state.zone !== "all");
+    $("rg-from-l").hidden = $("rg-to-l").hidden = state.date !== "range";
     $("f-clear").hidden = !filtersOn();
     var sp = TABS.filter(function (t) { return t[0] === state.sport; })[0][1];
     var sh = $("showing"); sh.textContent = "Showing ";
     sh.appendChild(node("b", "", rows.length + " pick" + (rows.length === 1 ? "" : "s")));
-    sh.appendChild(document.createTextNode(" · " + (sp === "All" ? "All sports" : sp) + " · " + DATE_NAMES[state.date] + "."));
+    sh.appendChild(document.createTextNode(" · " + (sp === "All" ? "All sports" : sp) + " · " + dateLabel() + "."));
 
     var list = $("list"); list.textContent = "";
     if (!rows.length) {
@@ -247,9 +265,21 @@ footer { color: var(--muted); font-size: 13px; }
   }
 
   $("f-q").addEventListener("input", function (e) { state.q = e.target.value; render(); });
-  ["date", "zone"].forEach(function (k) { $("f-" + k).addEventListener("change", function (e) { state[k] = e.target.value; render(); }); });
+  ["date", "zone"].forEach(function (k) { $("f-" + k).addEventListener("change", function (e) {
+    state[k] = e.target.value;
+    if (k === "date" && state.date === "range" && !state.from && !state.to) { state.from = ymdAgo(6); state.to = ymdAgo(0); $("rg-from").value = state.from; $("rg-to").value = state.to; }
+    render();
+  }); });
+  function onRange() {
+    var f = $("rg-from").value, t = $("rg-to").value;
+    if (f && t && f > t) { var x = f; f = t; t = x; $("rg-from").value = f; $("rg-to").value = t; }
+    state.from = f; state.to = t; render();
+  }
+  $("rg-from").addEventListener("change", onRange);
+  $("rg-to").addEventListener("change", onRange);
   $("f-clear").addEventListener("click", function () {
-    state.q = ""; state.date = "today"; state.zone = "all";
+    state.q = ""; state.date = "today"; state.zone = "all"; state.from = ""; state.to = "";
+    $("rg-from").value = ""; $("rg-to").value = "";
     $("f-q").value = ""; $("f-date").value = "today"; $("f-zone").value = "all";
     render(); $("f-q").focus();
   });
